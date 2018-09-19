@@ -17,8 +17,14 @@ Map of ~choice~ items, represented in maps
 + ~:description~ :: string
 + ~:title~ :: string
 + ~:cost~  :: sequence of maps
-  + ~:price~ :: number
+  + ~:price~ :: number, positive to charge the user, negative to
+                credit the user
   + ~:currency~ :: keyword
-+ ~:tags~ :: sequence of keywords
++ ~:tags~ :: sequence of keywords, or instead of a keyword a tag may optionally be a pair of the tag
+    keyword and one of ~:apply~, ~:discount~, or ~:free~
+  + ~:apply~ :: Applies the tag to the user's picks
+  + ~:discount~ :: Discounts the price by 50% if the user possesses
+                   the tag
+  + ~:free~ :: Ignores cost if the user possesses the tag
 
 *** Layout
