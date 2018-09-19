@@ -1,4 +1,24 @@
 #+title: JumpDock — Jumpchain, Simplified
 #+author: Elliott Seyler / Seth Seylerius
 
-This is a simplified tool for hosting and using CYOAs, especially Jumpchain-compatible ones. 
+This is a simplified tool for hosting and using CYOAs, 
+especially Jumpchain-compatible ones. 
+
+* Data Structure
+
+** CYOA
+
++ Represented as an EDN file per-CYOA
+
+*** Choices
+
+Map of ~choice~ items, represented in maps
+
++ ~:description~ :: string
++ ~:title~ :: string
++ ~:cost~  :: sequence of maps
+  + ~:price~ :: number
+  + ~:currency~ :: keyword
++ ~:tags~ :: sequence of keywords
+
+*** Layout
