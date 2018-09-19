@@ -20,11 +20,26 @@ Map of ~choice~ items, represented in maps
   + ~:price~ :: number, positive to charge the user, negative to
                 credit the user
   + ~:currency~ :: keyword
-+ ~:tags~ :: sequence of keywords, or instead of a keyword a tag may optionally be a pair of the tag
-    keyword and one of ~:apply~, ~:discount~, or ~:free~
++ ~:tags~ :: sequence of keywords, 
+             or instead of a keyword tag 
+             may optionally be a pair of the tag keyword and one of 
+             ~:apply~, ~:discount~, or ~:free~
   + ~:apply~ :: Applies the tag to the user's picks
-  + ~:discount~ :: Discounts the price by 50% if the user possesses
-                   the tag
+  + ~:discount~ :: Discounts the price by 50% 
+                   if the user possesses the tag
   + ~:free~ :: Ignores cost if the user possesses the tag
 
 *** Layout
+
+Sequence of the contents. Possible contents are as follows:
+
++ String :: Markdown text
++ Keyword :: ~choice~ items matching that tag, sorted by:
+  + ~cost~ (ascending)
+  + ~sort-priority~ (ascending)
+  + ~tags~ (tags-not-in-common, sorted ascending)
+  + ~title~ (ascending)
++ Sequence :: A child layout
+
+If a layout only contains two tags and nothing else, 
+it is arranged in columns (given sufficient space).
