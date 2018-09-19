@@ -1,0 +1,4 @@
+#+title: JumpDock — Jumpchain, Simplified
+#+author: Elliott Seyler / Seth Seylerius
+
+This is a simplified tool for hosting and using CYOAs, especially Jumpchain-compatible ones. 
