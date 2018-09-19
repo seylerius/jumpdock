@@ -28,6 +28,7 @@ Map of ~choice~ items, represented in maps
   + ~:discount~ :: Discounts the price by 50% 
                    if the user possesses the tag
   + ~:free~ :: Ignores cost if the user possesses the tag
++ ~:sort-priority~ :: number, defaults to 10
 
 *** Layout
 
