@@ -22,9 +22,17 @@ Map of ~choice~ items, represented in maps
   + ~:currency~ :: keyword
 + ~:tags~ :: sequence of keywords, 
              or instead of a keyword tag 
-             may optionally be a pair of the tag keyword and one of 
-             ~:apply~, ~:discount~, or ~:free~
+             may optionally be a pair of the tag keyword and one of
+             the following options
   + ~:apply~ :: Applies the tag to the user's picks
+  + ~:set~ :: Sets the tag to a particular value, followed by a map:
+    + ~:type~ :: Either ~:number~ or an item tag
+                 (which allows selection from items with that tag)
+    + ~:value~ :: How the value is set
+      + ~:query~ :: Ask the user for the value
+      + ~:spin~ :: Randomly pick one of the tagged items
+      + Roll Spec :: A dice specification as a string, such as
+                     `"1d6+3"` or `"2d9+1d5-2"` or `"4d2x5"`
   + ~:discount~ :: Discounts the price by 50% 
                    if the user possesses the tag
   + ~:free~ :: Ignores cost if the user possesses the tag
