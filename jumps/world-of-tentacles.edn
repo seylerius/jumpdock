@@ -1,0 +1,102 @@
+{:choices [{:title "Age"
+            :description "Pick whatever you want."
+            :cost [[0 :cp]]
+            :tags [[:age :set [:number :query]]]
+            :category nil}
+           {:title "Male"
+            :description "Masculine bodyplan"
+            :cost [[0 :cp]]
+            :tags [:gender
+                   [:male :apply]]
+            :category nil}
+           {:title "Female"
+            :description "Feminine bodyplan"
+            :cost [[0 :cp]]
+            :tags [:gender
+                   [:female :apply]]
+            :category nil}
+           {:title "Futanari"
+            :description "All about that girldick—futanari bodyplan"
+            :cost [[0 :cp]]
+            :tags [:gender
+                   [:futanari :apply]]
+            :category nil}
+           {:title "Location"
+            :description "Roll a location"
+            :cost [[0 :cp]]
+            :tags [[:loc-roll :apply]
+                   [:location :set [:loc-option :spin]]]
+            :category nil}
+           {:title "Urban Fantasy"
+            :description "Magic in an urban setting"
+            :cost [[50 :cp]]
+            :tags [:loc-option
+                   [:loc-roll :free]
+                   [:location :set :urban-fantasy]]
+            :category nil}
+           {:title "Traditional Fantasy"
+            :description "Magic in a classic high-fantasy setting"
+            :cost [[50 :cp]]
+            :tags [:loc-option
+                   [:loc-roll :free]
+                   [:location :set :traditional-fantasy]]
+            :category nil}
+           {:title "Asian Fantasy"
+            :description "Magic in an asian or asian-style setting"
+            :cost [[50 :cp]]
+            :tags [:loc-option
+                   [:loc-roll :free]
+                   [:location :set :asian-fantasy]]
+            :category nil}
+           {:title "Space Fantasy"
+            :description "Magic _in Space_"
+            :cost [[50 :cp]]
+            :tags [:loc-option
+                   [:loc-roll :free]
+                   [:location :set :space-fantasy]]
+            :category nil}
+           {:title "Cyberpunk"
+            :description "Dystopian tech-future"
+            :cost [[50 :cp]]
+            :tags [:loc-option
+                   [:loc-roll :free]
+                   [:location :set :cyberpunk]]
+            :category nil}
+           {:title "Western"
+            :description "Cowboys, Indians, Sheriffs, and Tentacle Monsters"
+            :cost [[50 :cp]]
+            :tags [:loc-option
+                   [:loc-roll :free]
+                   [:location :set :western]]
+            :category nil}
+           {:title "Steampunk"
+            :description "Brass, Bronze, Steam, and Clockwork"
+            :cost [[50 :cp]]
+            :tags [:loc-option
+                   [:loc-roll :free]
+                   [:location :set :steampunk]]
+            :category nil}
+           {:title "Free Choice"
+            :description "Pick whichever option you'd like"
+            :cost [[50 :cp]]
+            :tags [:loc-option
+                   [:loc-roll :free]
+                   [:location :set [:loc-option :query]]]
+            :category nil}]
+ :layout ["Some worlds are full of horrifying and erotic things. In such worlds there are creatures, perhaps
+openly known about or perhaps lurking in the shadows, with suspiciously phallic appendages
+just waiting to plunge them into the unsuspecting. Such creatures may be products of science,
+ancient leftovers from another age, or demons called onto this plane of existence. Whatever
+their origin, events conspire to bring such things into all kinds of sexy situations.
+
+For the ten year duration of this Jump you are stuck dealing with this situation, either as
+someone interacting with tentacle monsters or as a tentacle monster yourself, so take these
+1000 CP​ and see what you can make of yourself.
+
+Good luck.
+
+Note: ​Most of the language in this document assumes a male character and female partners by
+default as tentacles are traditionally symbols of male dominance and sexuality. This isn’t a set in
+stone rule except in the case of the general perk The Basic Package​, which expressly requires
+a male genitalia or a substitute such as a set of tentacles. In all other cases these options are
+gender neutral and will function the same regardless of yours or your partner’s gender."]}
