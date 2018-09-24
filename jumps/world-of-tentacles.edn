@@ -1,7 +1,8 @@
 {:choices [{:title "Age"
             :description "Pick whatever you want."
             :cost [[0 :cp]]
-            :tags [[:age :set [:number :query]]]
+            :tags [:age-opt
+                   [:age :set [:number :query]]]
             :category nil}
            {:title "Male"
             :description "Masculine bodyplan"
@@ -82,21 +83,41 @@
             :tags [:loc-option
                    [:loc-roll :free]
                    [:location :set [:loc-option :query]]]
-            :category nil}]
- :layout ["Some worlds are full of horrifying and erotic things. In such worlds there are creatures, perhaps
-openly known about or perhaps lurking in the shadows, with suspiciously phallic appendages
-just waiting to plunge them into the unsuspecting. Such creatures may be products of science,
-ancient leftovers from another age, or demons called onto this plane of existence. Whatever
-their origin, events conspire to bring such things into all kinds of sexy situations.
+            :category nil}
+           {:title "N/A"
+            :description "No applicable location, due to modification of another jump"
+            :cost [[0 :cp]]
+            :tags [:loc-na
+                   [:location :set :import]]}]
+ :layout ["Some worlds are full of horrifying and erotic things.
+In such worlds there are creatures,
+perhaps openly known about or perhaps lurking in the shadows,
+with suspiciously phallic appendages just waiting to plunge them into the unsuspecting.
+Such creatures may be products of science,
+ancient leftovers from another age,
+or demons called onto this plane of existence.
+Whatever their origin,
+events conspire to bring such things into all kinds of sexy situations.
 
-For the ten year duration of this Jump you are stuck dealing with this situation, either as
-someone interacting with tentacle monsters or as a tentacle monster yourself, so take these
-1000 CP​ and see what you can make of yourself.
+For the ten year duration of this Jump you are stuck dealing with this situation,
+either as someone interacting with tentacle monsters or as a tentacle monster yourself,
+so take these 1000 CP​ and see what you can make of yourself.
 
 Good luck.
 
-Note: ​Most of the language in this document assumes a male character and female partners by
-default as tentacles are traditionally symbols of male dominance and sexuality. This isn’t a set in
-stone rule except in the case of the general perk The Basic Package​, which expressly requires
-a male genitalia or a substitute such as a set of tentacles. In all other cases these options are
-gender neutral and will function the same regardless of yours or your partner’s gender."]}
+Note: ​Most of the language in this document assumes a male character and female partners by default
+as tentacles are traditionally symbols of male dominance and sexuality.
+This isn’t a set in stone rule except in the case of the general perk **The Basic Package**​,
+which expressly requires a male genitalia or a substitute such as a set of tentacles.
+In all other cases these options are gender neutral and will function the same
+regardless of yours or your partner’s gender."
+          "# Basics"
+          "## Age"
+          "Pick whatever you like, it doesn't matter."
+          :age-opt
+          "## Location"
+          "Either roll a location for free, or pay to pick one.
+Choose N/A if you're applying this to another setting."
+          [:loc-roll
+           :loc-na
+           :loc-option]]}
