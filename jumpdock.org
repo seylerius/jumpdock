@@ -61,4 +61,9 @@ with the following special tags defined:
                 Prefix with ~!~ to exclude.
                 Can be used more than once.
     + ~:category~ :: only include items with the specified category.
-  + ~:sort~ :: 
+  + ~:sort~ :: sequence of sort options. 
+               Defaults to ascending, prefix with ~!~ to reverse.
+               Unrecognized options are assumed to be currencies.
+    + ~:title~ :: Alphabetical sort by item title
+    + ~:rollable~ :: Numeric sort by roll target
++ ~:choice~ :: a specific choice item
