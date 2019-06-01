@@ -1,94 +1,332 @@
-{:choices [{:title "Age"
-            :description "Pick whatever you want."
-            :cost [[0 :cp]]
-            :tags [:age-opt
-                   [:age :set [:number :query]]]
-            :category nil}
-           {:title "Male"
-            :description "Masculine bodyplan"
-            :cost [[0 :cp]]
-            :tags [:gender
-                   [:male :apply]]
-            :category nil}
-           {:title "Female"
-            :description "Feminine bodyplan"
-            :cost [[0 :cp]]
-            :tags [:gender
-                   [:female :apply]]
-            :category nil}
-           {:title "Futanari"
-            :description "All about that girldick—futanari bodyplan"
-            :cost [[0 :cp]]
-            :tags [:gender
-                   [:futanari :apply]]
-            :category nil}
-           {:title "Location"
-            :description "Roll a location"
-            :cost [[0 :cp]]
-            :tags [[:loc-roll :apply]
-                   [:location :set [:loc-option :spin]]]
-            :category nil}
-           {:title "Urban Fantasy"
-            :description "Magic in an urban setting"
-            :cost [[50 :cp]]
-            :tags [:loc-option
-                   [:loc-roll :free]
-                   [:location :set :urban-fantasy]]
-            :category nil}
-           {:title "Traditional Fantasy"
-            :description "Magic in a classic high-fantasy setting"
-            :cost [[50 :cp]]
-            :tags [:loc-option
-                   [:loc-roll :free]
-                   [:location :set :traditional-fantasy]]
-            :category nil}
-           {:title "Asian Fantasy"
-            :description "Magic in an asian or asian-style setting"
-            :cost [[50 :cp]]
-            :tags [:loc-option
-                   [:loc-roll :free]
-                   [:location :set :asian-fantasy]]
-            :category nil}
-           {:title "Space Fantasy"
-            :description "Magic _in Space_"
-            :cost [[50 :cp]]
-            :tags [:loc-option
-                   [:loc-roll :free]
-                   [:location :set :space-fantasy]]
-            :category nil}
-           {:title "Cyberpunk"
-            :description "Dystopian tech-future"
-            :cost [[50 :cp]]
-            :tags [:loc-option
-                   [:loc-roll :free]
-                   [:location :set :cyberpunk]]
-            :category nil}
-           {:title "Western"
-            :description "Cowboys, Indians, Sheriffs, and Tentacle Monsters"
-            :cost [[50 :cp]]
-            :tags [:loc-option
-                   [:loc-roll :free]
-                   [:location :set :western]]
-            :category nil}
-           {:title "Steampunk"
-            :description "Brass, Bronze, Steam, and Clockwork"
-            :cost [[50 :cp]]
-            :tags [:loc-option
-                   [:loc-roll :free]
-                   [:location :set :steampunk]]
-            :category nil}
-           {:title "Free Choice"
-            :description "Pick whichever option you'd like"
-            :cost [[50 :cp]]
-            :tags [:loc-option
-                   [:loc-roll :free]
-                   [:location :set [:loc-option :query]]]
-            :category nil}
-           {:title "N/A"
-            :description "No applicable location, due to modification of another jump"
-            :cost [[0 :cp]]
-            :tags [:loc-na
-                   [:location :set :import]]}]
+{:choices
+ {:age {:title "Age"
+        :description "Pick whatever you want."
+        :cost [[0 :cp]]
+        :tags [:age-opt
+               [:age :set [:number :query]]]
+        :category nil}
+  :gender-male {:title "Male"
+                :description "Masculine bodyplan"
+                :cost [[0 :cp]]
+                :tags [:gender
+                       [:male :apply]]
+                :category nil}
+  :gender-female {:title "Female"
+                  :description "Feminine bodyplan"
+                  :cost [[0 :cp]]
+                  :tags [:gender
+                         [:female :apply]]
+                  :category nil}
+  :gender-futa {:title "Futanari"
+                :description "All about that girldick—futanari bodyplan"
+                :cost [[0 :cp]]
+                :tags [:gender
+                       [:futanari :apply]]
+                :category nil}
+  :loc-roll {:title "Location"
+             :description "Roll a location"
+             :cost [[0 :cp]]
+             :tags [[:loc-roll :apply]
+                    [:location :set [:loc-option :spin]]]
+             :category nil}
+  :loc-urban-fantasy {:title "Urban Fantasy"
+                      :description "Magic in an urban setting"
+                      :cost [[50 :cp]]
+                      :tags [:loc-option
+                             [:loc-roll :free]
+                             [:location :set :urban-fantasy]]
+                      :category nil}
+  :loc-trad-fantasy {:title "Traditional Fantasy"
+                     :description "Magic in a classic high-fantasy setting"
+                     :cost [[50 :cp]]
+                     :tags [:loc-option
+                            [:loc-roll :free]
+                            [:location :set :traditional-fantasy]]
+                     :category nil}
+  :loc-asian-fantasy {:title "Asian Fantasy"
+                      :description "Magic in an asian or asian-style setting"
+                      :cost [[50 :cp]]
+                      :tags [:loc-option
+                             [:loc-roll :free]
+                             [:location :set :asian-fantasy]]
+                      :category nil}
+  :loc-space-fantasy {:title "Space Fantasy"
+                      :description "Magic _in Space_"
+                      :cost [[50 :cp]]
+                      :tags [:loc-option
+                             [:loc-roll :free]
+                             [:location :set :space-fantasy]]
+                      :category nil}
+  :loc-cyberpunk{:title "Cyberpunk"
+                 :description "Dystopian tech-future"
+                 :cost [[50 :cp]]
+                 :tags [:loc-option
+                        [:loc-roll :free]
+                        [:location :set :cyberpunk]]
+                 :category nil}
+  :loc-western {:title "Western"
+                :description "Cowboys, Indians, Sheriffs, and Tentacle Monsters"
+                :cost [[50 :cp]]
+                :tags [:loc-option
+                       [:loc-roll :free]
+                       [:location :set :western]]
+                :category nil}
+  :loc-steampunk {:title "Steampunk"
+                  :description "Brass, Bronze, Steam, and Clockwork"
+                  :cost [[50 :cp]]
+                  :tags [:loc-option
+                         [:loc-roll :free]
+                         [:location :set :steampunk]]
+                  :category nil}
+  :loc-free {:title "Free Choice"
+             :description "Pick whichever option you'd like"
+             :cost [[50 :cp]]
+             :tags [:loc-option
+                    [:loc-roll :free]
+                    [:location :set [:loc-option :query]]]
+             :category nil}
+  :loc-import {:title "Cross-Jump Import"
+               :description "No applicable location, due to modification of another jump"
+               :cost [[0 :cp]]
+               :tags [:loc-na
+                      [:location :set :import]]
+               :category nil}
+  :origin-monster-hunter {:title "Monster Hunter"
+                          :description "​The drop-in option.
+You’re not any kind of tentacle monster,
+you just happen to have the bad (or good?) luck
+to be visiting a world where tentacle monsters exist.
+Your perk trees are **Survivor**​, which grants bonuses to surviving, escaping,
+and maybe even enjoying tentacle sex,
+and **Hunter**​, which gives you the tools to turn the tables on the monsters
+and wield sex as a weapon."
+                          :cost [[0 :cp]]
+                          :tags [:origin
+                                 [:monster-hunter :apply]]
+                          :category :origin}
+  :origin-tentacle-monster {:title "Tentacle Monster"
+                            :description "The tentacle monster is a lone creature,
+an ambush predator lurking in the shadows of the world.
+ Like any other animal it exists primarily to breed and multiply,
+and while you certainly aren’t just a dumb animal (or demon or mutant or whatever)
+this origin will make you very good at stalking and subduing prey with the Predator​ tree
+or subduing them further still and converting them into loyal broodmares with the Breeder​ tree."
+                            :cost [[0 :cp]]
+                            :tags [:origin
+                                   [:tentacle-monster :apply]]
+                            :category :origin}
+  :origin-profane-master {:title "Master of the Profane"
+                          :description "​This origin represents the magician or scientist or cultist
+who commands monsters to his own ends,
+creating and empowering them to act on his behalf through acts of science or sorcery or profane religion.
+Unlike the other origins Master of the Profane only has one perk tree,
+but it has two full trees of items (Science​ and Magic​) to compensate."
+                          :cost [[0 :cp]]
+                          :tags [:origin
+                                 [:profane-master :apply]]
+                          :category :origin}
+  :origin-demon-king {:title "Demon King"
+                      :description "​A monster among monsters,
+demon kings aren’t content to merely eat and fuck all day like some common spawn,
+they have ambitions to fulfill and worlds to conquer!
+Their perk trees are Ruler​,
+which gives bonuses to charisma and a depraved form of leadership,
+and Unholy​,
+which allows them to back up their right to rule with arcane power
+when push comes to shove."
+                      :cost [[0 :cp]]
+                      :tags [:origin
+                             [:demon-king :apply]]
+                      :category :origin}
+  :basic-package {:title "The Basic Package"
+                  :description "It wouldn’t be much of a tentacle monster jump
+if you couldn’t be some kind of tentacle monster.
+
+But there’s so many kinds!
+Demons and mutants and slimes and eldritch things from outside time and space,
+any of these can be a tentacle monster
+and now, with this perk, you can be all that and more.
+
+Choose your monster form.
+It can be anything you like within reason
+(so being a kaiju is right out)
+but it can’t have any innate powers beyond simple physical things like claws and wings
+(That’s what the other perks are for!).
+It doesn’t necessarily have to have tentacles
+but it does have to be some kind of sex monster,
+so you need some kind of male genitalia,
+whether it be tentacles or a penis or whatnot."
+                  :cost [[100 :cp]]
+                  :tags [:form
+                         :general-perks
+                         [:monster-form :apply]
+                         [:demon-king :free]
+                         [:tentacle-monster :free]]
+                  :category :perks}
+  :human-alt-form {:title "Human Alternate Form"
+                   :description "Some monsters can masquerade as human,
+and with this perk you can too.
+You can pick whether you human form or your monster form is the default,
+which determines what you'll revert to if transformation is disabled,
+or if you're knocked out."
+                   :cost [[100 :cp]]
+                   :tags [:form
+                          :general-perks
+                          [:monster-form :required]
+                          [:human-alt :apply]]
+                   :category :perks}
+  :tentacle-logic {:title "Tentacle Logic"
+                   :description "It probably goes without saying that
+tentacle porn doesn’t imitate real sex very well.
+This perk allows you to enforce strictly cosmetic tropes common to hentai and tentacle porn,
+including allowing you to indulge in fetishes that are dangerous, unhealthy,
+or even not physically possible
+(such as womb fucking and “all the way through” penetrations)
+without any ill effects.
+
+Further, the rules governing consent can be much looser when tentacle monsters enter the equation.
+This perk allows you to convince an unwilling partner to give consent as you ravish them.
+The means by which this is done and the exact effect it has will vary from person to person,
+but in general it will entail attending to your partner’s pleasure rather than your own.
+The more this is done,
+the more warmly they’ll remember the experience afterwards
+(whether they’re willing to admit it or not), 
+and the more likely they are to be willing to take a second taste
+of what carnal delights you can offer them."
+                   :cost [[0 :cp]]
+                   :tags [:general-perks]
+                   :category :perks}
+  :fucking-hot {:title "Fucking Hot (Local)"
+                :description "A lot of people in this world are downright unreasonably attractive -
+which is fortunate, since a lot of them spend so much time naked.
+For your time in this Jump, you and everyone else receives a free hotness upgrade;
+if pure physical attractiveness was rated on a scale of 1 to 10,
+this would be an effective +2 across the board.
+
+Fucking Hot applies to all Origins.
+In the case of Tentacle Monsters that don't have forms humans would normally consider attractive,
+the Perk's effects are more focused on making the beast look strong, healthy, and dangerous."
+                :cost [[0 :cp]]
+                :tags [:general-perks]
+                :category :perks}
+  :fucking-hot-future {:title "Fucking Hot (Future)"
+                       :description "This extends the `Fucking Hot` perk into future jumps."
+                       :cost [[100 :cp]]
+                       :tags [:general-perks]
+                       :category :perks}
+  :carnal-artist {:title "Carnal Artist"
+                  :description "You wouldn’t be much of a tentacle monster
+if you didn’t know all the ways that you can bring a woman to orgasm.
+This perk gives you a built-in instinct for sex and eroticism
+and a mastery of related bedroom skills.
+Even if you were a blushing virgin before this jump,
+having this perk will give you an innate sense of what needs to be done
+to accomplish any strictly sex-related goals you might have;
+whether it’s bringing your partner off by milking her tits
+or leaving her hanging right on the edge of orgasm for hours on end,
+you’ll be able to pull it off.
+This perk also gives you a major advantage in any form of sex-based combat,
+such as wrestling your partner into a submissive position."
+                  :cost [[100 :cp]]
+                  :tags [:general-perks]
+                  :category :perks}
+  :consentacles {:title "Consentacles"
+                 :description "Look, just because you’re an eldritch abomination
+made of sin and debauchery doesn’t mean you can’t have emotional needs too.
+Thanks to this perk your monstrous form is no barrier to finding willing partners.
+So long as you haven’t been acting like a monster recently
+people will tend to respond to seeing your inhuman form with fascination rather than fear.
+Small children might look at your many tentacles and see a jungle gym in the making,
+while schoolgirls might find themselves wondering what your hugs feel like
+or fantasizing about bearing your children.
+This won’t necessarily make them act on the idea
+but they’ll certainly be more receptive to any flirting and seduction you might indulge in."
+                 :cost [[100 :cp]]
+                 :tags [:general-perks]
+                 :category :perks}
+  :world-of-tentacles {:title "World of Tentacles (Local)"
+                       :description "Everything is more fun with friends,
+and tentacle rape is no exception.
+This perk is a global toggle which allows you,
+upon entering this jump for the first time,
+to change any and all beings in the jump that would classify as a monster of some sort
+into a monster girl, tentacle monster, or some other kind of sex monster.
+The random encounters in a JRPG might start to look like
+something straight out of the Monster Girl Encyclopedia
+while the villains in a magical girl show will find much more interesting ways to drain energy
+than stealing hearts or whatever.
+This perk doesn’t make said monsters more or less powerful
+or turn dumb animals into intelligent foes."
+                       :cost [[0 :cp]]
+                       :tags [:general-perks]
+                       :category :perks}
+  :world-of-tentacles-future {:title "World of Tentacles (Future)"
+                              :description "The `World of Tentacles` toggle is now permanent.
+In any future jump, you can toggle all monsters to monster girls, tentacle monsters, and sex monsters."
+                              :cost [[200 :cp]]
+                              :tags [:general-perks]
+                              :category :perks}
+  :seeds-of-victory {:title "Seeds of Victory"
+                     :description "Despite everything it is almost guaranteed
+that a hunter of tentacle monsters will end up getting fucked,
+so why not learn from it?
+So long as you don't take a dominant role
+you treat any time having sex as if you had spent it
+doing a comprehensive examination and interview of your partner(s) with their active cooperation
+with a focus on their combat capabilities and weaknesses."
+                     :cost [[100 :cp]]
+                     :tags [:mh-survivor-perks
+                            [:]]
+                     :category :perks}
+  :venus-thigh-trap {:title "Venus Thigh Trap"
+                     :description "So long as others, be it an individual or a group,
+were initially dominant during sex with you then
+you can force them to maintain that role and keep fucking you.
+The more submission and sexual skill you display,
+the greater the boost to stamina you receive
+and the harder they will find it to stop even in the face of danger."
+                     :cost [[200 :cp]]
+                     :tags [:mh-survivor-perks]
+                     :category :perks}
+  :poisoned-orchid {:title "Poisoned Orchid"
+                    :description "The most inviting things can be a trap
+and you are well aware of it.
+When you or a sexual partner climaxes
+you may subtly poison them with a toxin
+which cumulatively fatigues them
+while also acting as an aphrodisiac.
+Alternatively you may choose use such a climax as a vector for any other toxins,
+diseases, curses, or other adverse conditions that you are capable of inflicting.
+For this purpose the duration and intensity of sex can substitute for
+preparations, actions, and casting time that might otherwise be required."
+                    :cost [[400 :cp]]
+                    :tags [:mh-survivor-perks]
+                    :category :perks}
+  :tangling-the-vines {:title "Tangling the Vines"
+                       :description "It might seem impossible to escape a dozen tentacles grasping for you,
+but you know how to take advantage of the manner in which each can get in the way of the others.
+During any fight or sexual encounter you can reduce your opponent's effective skill,
+and increase your own,
+based on the number of limbs they have above four
+and on how many of those additional limbs they have attempted to make use of.
+In addition you gain a similar bonuses when attacked or molested by groups of similar opponents
+(be they a unit of soldiers or a gang of anonymous thugs)
+which is based on the number of individuals in the group.
+
+For purposes of this perk cocks or prehensile appendages are treated as a limbs."
+                       :cost [[600 :cp]]
+                       :tags [:mh-survivor-perks]
+                       :category :perks}
+  :lie-back-think-of-england {:title "Lie Back and Think of England"
+                              :description "Sometimes you can't get away from sex,
+either due to too many tentacles or being expected to do your 'marital duties'.
+You can temporarily alter your mindset into one highly accepting of sexual demands
+and, indeed, increasingly enthusiastic and cooperative
+the more that you or your partners are pleasured.
+You are insulated from psychological damage while in this state,
+be it addiction or mind-break or even just nausea at having done... that,
+and your true mind can surface when the situation ends or opportunities to escape occur."
+                              :cost [[100 :cp]]}}
  :layout ["Some worlds are full of horrifying and erotic things.
 In such worlds there are creatures,
 perhaps openly known about or perhaps lurking in the shadows,
