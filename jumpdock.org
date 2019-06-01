@@ -12,31 +12,37 @@ especially Jumpchain-compatible ones.
 
 *** Choices
 
-Map of ~choice~ items, represented in maps
+Map of ~choice~ items, represented in maps.
 
 + ~:title~ :: string
 + ~:description~ :: string
-+ ~:cost~  :: sequence of sequences
-  + ~<price>~ :: number, positive to charge the user, negative to
-                credit the user
-  + ~<currency>~ :: keyword
-+ ~:tags~ :: sequence of keywords, 
-             or instead of a keyword tag 
-             may optionally be a pair of the tag keyword and one of
-             the following options
-  + ~:apply~ :: Applies the tag to the user's picks
-  + ~:set~ :: Sets the tag to a particular value, 
-              followed by the value or a sequence:
-    + ~<type>~ :: Either ~:number~ or an item tag
-                 (which allows selection from items with that tag)
-    + ~<value>~ :: How the value is set
-      + ~:query~ :: Ask the user for the value
-      + ~:spin~ :: Randomly pick one of the tagged items
-      + Roll Spec :: A dice specification as a string, such as
-                     ~"1d6+3"~ or ~"2d9+1d5-2"~ or ~"4d2x5"~
-  + ~:discount~ :: Discounts the price by 50% 
-                   if the user possesses the tag
-  + ~:free~ :: Ignores cost if the user possesses the tag
++ ~:base-values~  :: map of ~currency~ keywords to ~value~ numbers,
+     charging the user if negative, crediting if positive
++ ~:tags~ :: sequence of keywords
++ ~:interactions~ :: sequence of sequences
+  + ~<interaction-type>~ :: keyword describing type of interaction
+    + ~:exclusive~ :: must be the only member of the specified tag
+    + ~:conflicts~ :: can't be included with the specified object
+    + ~:requires~ :: must include the specified object
+    + ~:free~ :: free if the specified object is present
+    + ~:discount~ :: half off if the specified object is present
+    + ~:multiples~ :: for items that can be purchased more than once
+    + ~:roll~ :: roll on the specified tag, 
+                 looking at ~:rollable~ values for weights
+    + ~:rollable~ :: target values for rolls and spins
+  + ~<object>~ :: sequence, the tag or choice being referenced
+                  (required for all except ~:multiples~ and ~:rollable~)
+    + ~<type>~ :: keyword, one of ~:tag~ or ~:choice~
+    + ~<ref>~ :: keyword, the identifying key of the tag or choice
+  + ~<currency>~ :: keyword, the value being eliminated or discounted
+                    (required for ~:free~ and ~:discount~)
+  + ~<limit>~ :: number, limit on multiple purchases, ~-1~ for unlimited
+                 (required for ~:multiples~)
+  + ~<variance>~ :: keyword, type of price variation for later purchases
+                    (optional for ~:multiples~)
+    + ~:first-free~ :: first purchase free for everyone
+    + ~:first-discountable~ :: restricted discount only applies to first
+  + ~<values>~ :: sequence of numbers, target values for rolls and spins
 + ~:sort-priority~ :: number, defaults to 10
 + ~:category~ :: Display category as a string,
                  such as ~"Items"~ or ~"Perks"~, 
@@ -44,15 +50,15 @@ Map of ~choice~ items, represented in maps
 
 *** Layout
 
-Sequence of the contents. Possible contents are as follows:
+Layout given in hiccup notation, 
+with the following special tags defined:
 
-+ String :: Markdown text
-+ Keyword :: ~choice~ items matching that tag, sorted by:
-  + ~cost~ (ascending)
-  + ~sort-priority~ (ascending)
-  + ~tags~ (tags-not-in-common, sorted ascending)
-  + ~title~ (ascending)
-+ Sequence :: A child layout
-
-If a layout only contains two tags and nothing else, 
-it is arranged in columns (given sufficient space).
++ ~:group~ :: a displayed group of choice items,
+              drawn from the ~:choices~ map.
+              Has the following attributes
+  + ~:filter~ :: filter query, sequence of any of the following:
+    + ~:tag~ :: only include items with the specified tag.
+                Prefix with ~!~ to exclude.
+                Can be used more than once.
+    + ~:category~ :: only include items with the specified category.
+  + ~:sort~ :: 
