@@ -35,7 +35,7 @@ Map of ~choice~ items, represented in maps.
     + ~<type>~ :: keyword, one of ~:tag~ or ~:choice~
     + ~<ref>~ :: keyword, the identifying key of the tag or choice
   + ~<currency>~ :: keyword, the value being eliminated or discounted
-                    (required for ~:free~ and ~:discount~)
+                    (required for ~:free~, ~:discount~, and ~:rollable~)
   + ~<limit>~ :: number, limit on multiple purchases, ~-1~ for unlimited
                  (required for ~:multiples~)
   + ~<variance>~ :: keyword, type of price variation for later purchases
