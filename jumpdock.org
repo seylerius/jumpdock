@@ -33,8 +33,9 @@ Map of ~choice~ items, represented in maps.
                  followed by a dice spec
     + ~:rollable~ :: target values for rolls and spins
     + ~:set~ :: add the specified choice with write-in data,
-                using the ~:data~ or ~:file~ keys to provide choices,
-                and the ~:validator~ key to provide a validator function
+                using the ~:data~ or ~:file~ keys to provide choices
+    + ~:write-in~ :: mark the choice as one to be set with write-in data,
+                     optionally using a ~spec~ to validate
   + ~<object>~ :: sequence, the tag or choice being referenced
                   (required for all except ~:multiples~ and ~:rollable~)
     + ~<type>~ :: keyword, one of ~:tag~ or ~:choice~
