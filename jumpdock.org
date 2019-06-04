@@ -28,14 +28,23 @@ Map of ~choice~ items, represented in maps.
     + ~:discount~ :: half off if the specified object is present
     + ~:multiples~ :: for items that can be purchased more than once
     + ~:roll~ :: roll on the specified tag, 
-                 looking at ~:rollable~ values for weights
+                 looking at ~:rollable~ values for weights,
+                 or as a write-in on the specified choice,
+                 followed by a dice spec
     + ~:rollable~ :: target values for rolls and spins
+    + ~:set~ :: add the specified choice with write-in data,
+                using the ~:data~ or ~:file~ keys to provide choices,
+                and the ~:validator~ key to provide a validator function
   + ~<object>~ :: sequence, the tag or choice being referenced
                   (required for all except ~:multiples~ and ~:rollable~)
     + ~<type>~ :: keyword, one of ~:tag~ or ~:choice~
     + ~<ref>~ :: keyword, the identifying key of the tag or choice
   + ~<currency>~ :: keyword, the value being eliminated or discounted
                     (required for ~:free~, ~:discount~, and ~:rollable~)
+  + ~<rollspec>~ :: string, standard ~"<num>d<sides>[+/-<const>]"~ spec,
+                    where ~<num>~ is the number of dice,
+                    ~<sides>~ is the number of sides per die,
+                    and ~<const>~ is the numeric modifier
   + ~<limit>~ :: number, limit on multiple purchases, ~-1~ for unlimited
                  (required for ~:multiples~)
   + ~<variance>~ :: keyword, type of price variation for later purchases
