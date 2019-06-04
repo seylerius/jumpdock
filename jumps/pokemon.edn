@@ -33,13 +33,13 @@
                                             [:rollable [3] :cp]]]
                             :category "Location"}
            :location-Sinnoh {:title "Sinnoh"
-                            :description "Sinnoh is on an island at the northern tip of the same continent as Kanto, Johto, and Hoenn. The pokémon are numerous and varied, and the region is divided longitudinally by the Coronet mountain range. The climate is colder, so you might want to get a coat and boots."
-                            :base-values {:cp -100}
-                            :tags [:location
-                                   :wheel-of-location]
-                            :interactions [[:free [:choice :location-free-pick]
-                                            [:rollable [4] :cp]]]
-                            :category "Location"}
+                             :description "Sinnoh is on an island at the northern tip of the same continent as Kanto, Johto, and Hoenn. The pokémon are numerous and varied, and the region is divided longitudinally by the Coronet mountain range. The climate is colder, so you might want to get a coat and boots."
+                             :base-values {:cp -100}
+                             :tags [:location
+                                    :wheel-of-location]
+                             :interactions [[:free [:choice :location-free-pick]
+                                             [:rollable [4] :cp]]]
+                             :category "Location"}
            :location-unova {:title "Unova"
                             :description "Unova is on an entirely different continent than the previous four. The wildlife distribution is such that indigenous pokémon are common while pokémon from other regions are rare. Unova is fairly urbanized, with Castelia city serving as a hub of trade, food, people, and culture."
                             :base-values {:cp -100}
@@ -57,13 +57,13 @@
                                             [:rollable [6] :cp]]]
                             :category "Location"}
            :location-orre {:title "Orre"
-                            :description "Orre is a region that is almost entirely desert. Resources and wild pokémon are both scarce and crime is rampant, but the few bastions of civilization in the region house some of the world's best scientists. The region lacks predefined routes of travel, so get a means of transport and keep your pokénav on."
-                            :base-values {:cp -100}
-                            :tags [:location
-                                   :wheel-of-location]
-                            :interactions [[:free [:choice :location-free-pick]
-                                            [:rollable [7] :cp]]]
-                            :category "Location"}
+                           :description "Orre is a region that is almost entirely desert. Resources and wild pokémon are both scarce and crime is rampant, but the few bastions of civilization in the region house some of the world's best scientists. The region lacks predefined routes of travel, so get a means of transport and keep your pokénav on."
+                           :base-values {:cp -100}
+                           :tags [:location
+                                  :wheel-of-location]
+                           :interactions [[:free [:choice :location-free-pick]
+                                           [:rollable [7] :cp]]]
+                           :category "Location"}
            :location-free-pick {:title "Free Pick"
                                 :description "Free pick from any of the other seven regions without having to pay. I guess lady luck wanted you to choose your own destiny."
                                 :base-values {:cp -100}
@@ -71,8 +71,16 @@
                                 :interactions [[:rollable [8] :cp]]
                                 :category "Location"}
            :roll-age {:title "Roll Your Age"
-                        :description "Roll 1D8+9 for your age."
-                        :base-values {:cp 0}
-                        :tags [:age-wheel
-                               :identity]
-                        :interactions [[:roll ]]}}}
+                      :description "Roll 1D8+9 for your age."
+                      :base-values {:cp 0}
+                      :tags [:age-wheel
+                             :identity]
+                      :interactions [[:roll [:choice :age] "1d8+9"]]
+                      :category "Identity"}
+           :pick-age {:title "Pick Your Age"
+                      :description "Pick any age from 10-17."
+                      :base-values {:cp -100}
+                      :tags [:age-wheel
+                             :identity]
+                      :interactions [[:set {:target :age
+                                            :data [(range 10 18)]}]]}}}
