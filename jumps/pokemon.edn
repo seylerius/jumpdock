@@ -83,4 +83,10 @@
                       :tags [:age-wheel
                              :identity]
                       :interactions [[:set {:target :age
-                                            :data [(range 10 18)]}]]}}}
+                                            :data [(range 10 18)]}]]
+                      :category "Identity"}
+           :age {:title "Age"
+                 :description "Your age"
+                 :base-values {:cp 0}
+                 :tags [:identity]
+                 :interactions [:write-in :general/age]}}}
