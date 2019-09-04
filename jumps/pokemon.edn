@@ -121,4 +121,47 @@
                               :identity]
                        :category "Identity"}
            :actual-starter {:title "Actual Starter"
-                            :description "This applies to any starter pokémon."}}}
+                            :description "This applies to any starter pokémon. Yes, even those not in your region. You want a Chespin in Hoenn? Sure. Also applies to Pikachu and Eevee."
+                            :base-values {:cp 0}
+                            :tags [:starter]
+                            :category "Starter"}
+           :regional-common {:title "In Region, Common"
+                             :description "Applies to any pokémon that can be found easily in the wild of your selected region. \n\nEncounter rate 20% or greater (any route)"
+                             :base-values {:cp -50}
+                             :tags [:starter]
+                             :category "Starter"}
+           :regional-uncommon {:title "In Region, Uncommon"
+                               :description "Applies to pokémon that are more difficult to find in the wild of your region. \n\nEncounter rate 10% or 15% (any route)"
+                               :base-values {:cp -100}
+                               :tags [:starter]
+                               :category "Starter"}
+           :regional-rare {:title "In Region, Rare"
+                           :description "Applies to pokémon that have a very low encounter rate in your region. \n]nEncounter rate 5% (any route)"
+                           :base-values {:cp -150}
+                           :tags [:starter]
+                           :category "Starter"}
+           :not-regional {:title "Out Of Region"
+                          :description "Applies to pokémon that can't be caught in the wild of your region. Also applies to any pokémon with its hidden ability."
+                          :base-values {:cp -200}
+                          :tags [:starter]
+                          :category "Starter"}
+           :shiny {:title "Shiny"
+                   :description "Your starter is a shiny pokémon. It's entirely cosmetic, but it looks nice!"
+                   :base-values {:cp -50}
+                   :tags [:starter-options]
+                   :category "Starter"}
+           :egg-move {:title "Egg Move"
+                      :description "Your starter knows a move it should only be able to know via egg breeding."
+                      :base-values {:cp -50}
+                      :tags [:starter-options]
+                      :category "Starter"}
+           :advance-move {:title "Advance Move"
+                          :description "Your starter knows a move only its evolution should be able to learn."
+                          :base-values {:cp -100}
+                          :tags [:starter-options]
+                          :category "Starter"}
+           :mental-bond {:title "Mental Bond"
+                         :description "You and your starter share both emotions and thoughtspeech via an empathic link."
+                         :base-values {:cp -150}
+                         :tags [:starter-options]
+                         :category "Starter"}}}
