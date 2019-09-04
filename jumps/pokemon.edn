@@ -21,48 +21,48 @@
                             :base-values {:cp -100}
                             :tags [:location
                                    :wheel-of-location]
-                            :interactions [[:free [:choice :location-free-pick]
-                                            [:rollable [2] :cp]]]
+                            :interactions [[:free [:choice :location-free-pick]]
+                                           [:rollable [2] :cp]]
                             :category "Location"}
            :location-johto {:title "Hoenn"
                             :description "Hoenn is a ways to the southeast of both Kanto and Johto. It supports a tropical climate, and the terrain is home to a different range of pokémon. Lots of travel is water based, so you might want to get a boat or a pokémon with surf. The locals have odd musical tastes."
                             :base-values {:cp -100}
                             :tags [:location
                                    :wheel-of-location]
-                            :interactions [[:free [:choice :location-free-pick]
-                                            [:rollable [3] :cp]]]
+                            :interactions [[:free [:choice :location-free-pick]]
+                                           [:rollable [3] :cp]]
                             :category "Location"}
            :location-Sinnoh {:title "Sinnoh"
                              :description "Sinnoh is on an island at the northern tip of the same continent as Kanto, Johto, and Hoenn. The pokémon are numerous and varied, and the region is divided longitudinally by the Coronet mountain range. The climate is colder, so you might want to get a coat and boots."
                              :base-values {:cp -100}
                              :tags [:location
                                     :wheel-of-location]
-                             :interactions [[:free [:choice :location-free-pick]
-                                             [:rollable [4] :cp]]]
+                             :interactions [[:free [:choice :location-free-pick]]
+                                            [:rollable [4] :cp]]
                              :category "Location"}
            :location-unova {:title "Unova"
                             :description "Unova is on an entirely different continent than the previous four. The wildlife distribution is such that indigenous pokémon are common while pokémon from other regions are rare. Unova is fairly urbanized, with Castelia city serving as a hub of trade, food, people, and culture."
                             :base-values {:cp -100}
                             :tags [:location
                                    :wheel-of-location]
-                            :interactions [[:free [:choice :location-free-pick]
-                                            [:rollable [5] :cp]]]
+                            :interactions [[:free [:choice :location-free-pick]]
+                                           [:rollable [5] :cp]]
                             :category "Location"}
            :location-kalos {:title "Kalos"
                             :description "Kalos is again on a third continent, also very far away from all the others. Kalos sports a wide variety of geography and pokémon, both indigenous and shared with other regions. Kalos has a history that stretches back millennia, and is known as a place of culture, the arts, and snobby connoisseurs."
                             :base-values {:cp -100}
                             :tags [:location
                                    :wheel-of-location]
-                            :interactions [[:free [:choice :location-free-pick]
-                                            [:rollable [6] :cp]]]
+                            :interactions [[:free [:choice :location-free-pick]]
+                                           [:rollable [6] :cp]]
                             :category "Location"}
            :location-orre {:title "Orre"
                            :description "Orre is a region that is almost entirely desert. Resources and wild pokémon are both scarce and crime is rampant, but the few bastions of civilization in the region house some of the world's best scientists. The region lacks predefined routes of travel, so get a means of transport and keep your pokénav on."
                            :base-values {:cp -100}
                            :tags [:location
                                   :wheel-of-location]
-                           :interactions [[:free [:choice :location-free-pick]
-                                           [:rollable [7] :cp]]]
+                           :interactions [[:free [:choice :location-free-pick]]
+                                          [:rollable [7] :cp]]
                            :category "Location"}
            :location-free-pick {:title "Free Pick"
                                 :description "Free pick from any of the other seven regions without having to pay. I guess lady luck wanted you to choose your own destiny."
