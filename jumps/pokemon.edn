@@ -164,4 +164,79 @@
                          :description "You and your starter share both emotions and thoughtspeech via an empathic link."
                          :base-values {:cp -150}
                          :tags [:starter-options]
-                         :category "Starter"}}}
+                         :category "Starter"}
+           :fitness {:title "Physical Fitness"
+                     :description "You gain a body that is healthy and strong. Not Captain America, but close."
+                     :base-values {:cp -100}
+                     :tags [:perks]
+                     :interactions [[:free [:choice :small-town]]]
+                     :category "Skills & Abilities"}
+           :survival {:title "Survival Training"
+                      :description "You gain an innate knowledge of survival skills. You could survive just about anywhere."
+                      :base-values {:cp -100}
+                      :tags [:perks]
+                      :interactions [[:free [:choice :hermit]]]
+                      :category "Skills & Abilities"}
+           :freerunning {:title "Freerunning"
+                         :description "You can pull off acrobatic feats very few humans and not many pokémon could match."
+                         :tags [:perks]
+                         :interactions [[:free [:choice :city-life]]]
+                         :category "Skills & Abilities"}
+           :combat-training {:title "Combat Training"
+                             :description "You gain mastery of hand to hand combat. You can also keep your cool in a fight."
+                             :base-values {:cp -100}
+                             :tags [:perks]
+                             :interactions [[:discount [:choice :drop-in]]]
+                             :category "Skills & Abilities"}
+           :mechanic {:title "Mechanic"
+                      :description "You become much more adept with a toolbox. You can fix or improve most machines."
+                      :base-values {:cp -300}
+                      :tags [:perks]
+                      :interactions [[:discount [:choice :small-town]]]
+                      :category "Skills & Abilities"}
+           :ranger {:title "Ranger"
+                    :description "You gain insight into the instincts of wild pokémon, as well as tracking skills."
+                    :base-values {:cp -300}
+                    :tags [:perks]
+                    :interactions [[:discount [:choice :hermit]]]
+                    :category "Skills & Abilities"}
+           :technician {:title "Technician"
+                        :description "You are very handy with most forms of electronics, from the PC to the pokéball."
+                        :base-values {:cp -300}
+                        :tags [:perks]
+                        :interactions [[:discount [:choice :city-life]]]
+                        :category "Skills & Abilities"}
+           :blend-in {:title "Blend In"
+                      :description "You can easily blend in to a crowd, hide in plain sight, or lose someone following you."
+                      :tags [:perks]
+                      :interactions [[:discount [:choice :drop-in]]]
+                      :category "Skills & Abilities"}
+           :aura {:title "Aura"
+                  :description "You gain the ability to manifest your aura. You can sense emotions, create barriers, and throw aura spheres. Your powers increase with training but cap equivalent to a Lucario."
+                  :base-values {:cp -600}
+                  :tags [:perks]
+                  :interactions [[:discount [:choice :small-town]]]
+                  :category "Skills & Abilities"}
+           :pokeglot {:title "Pokéglot"
+                      :description "You can talk to pokémon! They're smart enough to hold a conversation, trained ones being smarter, but they don't think the way humans do. You also pick up new languages very quickly."
+                      :base-values {:cp -600}
+                      :tags [:perks]
+                      :interactions [[:discount [:choice :hermit]]]
+                      :category "Skills & Abilities"}
+           :psionics {:title "Psionics"
+                      :description "You gain psychic powers like telekinesis and telepathy. You still can't understand your pokémon but can issue them orders via telepathy. No mind reading. Skill cap is equal to a Gardevoir."
+                      :base-values {:cp -600}
+                      :tags [:perks]
+                      :interactions [[:discount [:choice :city-life]]]
+                      :category "Skills & Abilities"}
+           :savant {:title "Savant"
+                    :description "Your mind is enhanced, granting you perfect memory, calculator-like mental math, and better spatial awareness. Your aim with a firearm is better than Annie Oakley and Simo Häyhä combined."
+                    :base-values {:cp -600}
+                    :tags [:perks]
+                    :interactions [[:discount [:choice :drop-in]]]
+                    :category "Skills & Abilities"}
+           :champ {:title "Champ in the Making"
+                   :description "You might just have what it takes to catch 'em all! You're an expert at training both teams and individuals, managing team dynamics, and working out social issues between teammates both pokémon and human. You can make teamwork work."
+                   :base-values {:cp -600}
+                   :tags [:perks]
+                   :category "Skills & Abilities"}}}
