@@ -239,4 +239,21 @@
                    :description "You might just have what it takes to catch 'em all! You're an expert at training both teams and individuals, managing team dynamics, and working out social issues between teammates both pokémon and human. You can make teamwork work."
                    :base-values {:cp -600}
                    :tags [:perks]
-                   :category "Skills & Abilities"}}}
+                   :category "Skills & Abilities"}
+           :freebie-kit {:title "Freebie Kit"
+                         :description "Here, take these basics for free: 1 bag, bigger on the inside; 1 pokégear, which can be muted; 1 pokédex, prefilled; 5 pokéballs, standard catch rate; 3 potions, band-aid in a bottle; 1 red hat."
+                         :base-values {:cp 0}
+                         :tags [:items]
+                         :category "Gear"}
+           :balls {:title "3x Master Balls"
+                   :description "Catches any wild pokémon without fail, but can't be sold."
+                   :base-values {:cp -100}
+                   :tags [:items]
+                   :category "Gear"}
+           :hm-kit {:title "HM Collection"
+                    :description "Contains one of every HM. Can't be sold."
+                    :base-values {:cp -50}
+                    :tags [:items]
+                    :interactions [[:free [:choice :moneybags]]]
+                    :category "Gear"}
+           }}
