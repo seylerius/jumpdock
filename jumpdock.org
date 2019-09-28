@@ -24,7 +24,9 @@ Map of ~choice~ items, represented in maps.
     + ~:exclusive~ :: must be the only member of the specified tag
     + ~:conflicts~ :: can't be included with the specified object
     + ~:requires~ :: must include the specified object
-    + ~:free~ :: free if the specified object is present
+    + ~:free~ :: free if the specified object is present,
+                 optionally enclose a ~:multiples~ interaction
+                 if more than one can be free
     + ~:discount~ :: half off if the specified object is present
     + ~:multiples~ :: for items that can be purchased more than once
     + ~:roll~ :: roll on the specified tag, 
