@@ -31,6 +31,7 @@ Map of ~choice~ items, represented in maps.
                      uses same ~:multiples~ rule as undiscounted
                      unless otherwise specified
     + ~:multiples~ :: for items that can be purchased more than once
+    + ~:maximum~ :: limit the number or value of the specified object
     + ~:roll~ :: roll on the specified tag, 
                  looking at ~:rollable~ values for weights,
                  or as a write-in on the specified choice,
@@ -50,8 +51,9 @@ Map of ~choice~ items, represented in maps.
                     where ~<num>~ is the number of dice,
                     ~<sides>~ is the number of sides per die,
                     and ~<const>~ is the numeric modifier
-  + ~<limit>~ :: number, limit on multiple purchases, ~-1~ for unlimited
-                 (required for ~:multiples~)
+  + ~<limit>~ :: number (indicating a count, with ~-1~ for unlimited)
+                 or value-spec (as ~:base-values~);
+                 required for ~:multiples~ and ~:maximum~
   + ~<variance>~ :: keyword, type of price variation for later purchases
                     (optional for ~:multiples~)
     + ~:first-free~ :: first purchase free for everyone
