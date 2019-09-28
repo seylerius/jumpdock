@@ -28,7 +28,8 @@ Map of ~choice~ items, represented in maps.
                  optionally enclose a ~:multiples~ interaction
                  if more than one can be free
     + ~:discount~ :: half off if the specified object is present,
-                     same ~:multiples~ guideline as ~:free~
+                     uses same ~:multiples~ rule as undiscounted
+                     unless otherwise specified
     + ~:multiples~ :: for items that can be purchased more than once
     + ~:roll~ :: roll on the specified tag, 
                  looking at ~:rollable~ values for weights,
