@@ -441,4 +441,13 @@
                     :description "I don't know what you did, but it looks like Darkrai has taken to messing with your mind. Expect horrible, sanity-distorting nightmares to plague your sleep at least once a week, probably more."
                     :base-values {:cp 300}
                     :tags [:drawbacks]
-                    :category "Flaws"}}}
+                    :category "Flaws"}}
+ :layout [:document {:choice :pokemon-jump}
+          "So I have this habit of watching people go on adventures. Unfortunately, with the way the Earth is completely mapped out and the lack of space program funding, the last great adventure I saw was James Cameron's submarine jaunt. Thus I am beset by an utter lack of good material."
+          "The reason I have approached you is simple: you wish your life could be different. Perfectly normal, by the way. Escape fantasies are a natural part of life these days. However, what I am offering you is an actual chance at escape. Or, at the very least, a break."
+          "Like I said, I am running out of good material. I want to see a story of adventure and excitement. This is impossible in this world. So! What I'm going to do is take your life and send it to a different world! Specifically: Pokémon! Yes, the video game. And the show and the books and the toys and the card game and you know what I mean."
+          "Why send someone from your world to the world of Pokémon instead of following someone already there? Because this way is much more fun."
+          "Here's how it works: if you accept you stay in the world of Pokémon for ten years. During that time, time is stopped in your home universe, magic treehouse style. After the ten years are up I offer you a few choices, including going home."
+          "Now, the world of Pokémon is actually rather dangerous, what with the feral creatures of unimaginable power and the roving gangs of criminals that are often pursuing some horrible cause and must be stopped. Therefore, I'm going to give you a budget. Use this budget to buy some supplies and skills before your adventure begins."
+          "This budget won't help you at all once you start your new life, so spend it all now!"
+          ]}
