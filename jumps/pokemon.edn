@@ -241,12 +241,43 @@
                    :base-values {:cp -600}
                    :tags [:perks]
                    :category "Skills & Abilities"}
-           :freebie-kit {:title "Freebie Kit"
-                         :description "Here, take these basics for free: 1 bag, bigger on the inside; 1 pokégear, which can be muted; 1 pokédex, prefilled; 5 pokéballs, standard catch rate; 3 potions, band-aid in a bottle; 1 red hat."
-                         :base-values {:cp 0}
-                         :tags [:items]
-                         :category "Gear"}
-           :balls {:title "3x Master Balls"
+           :bag {:title "Bag"
+                 :description "Bigger on the inside."
+                 :base-values {:cp 0}
+                 :tags [:items
+                        :freebie-kit]
+                 :category "Gear"}
+           :pokegear {:title "Pokégear"
+                      :description "Pokéworld comms and PDA. Can be muted."
+                      :base-values {:cp 0}
+                      :tags [:items
+                             :freebie-kit]
+                      :category "Gear"}
+           :pokedex {:title "Pokédex"
+                     :description "Handheld pokémon encyclopedia and analysis tool. Comes pre-filled."
+                     :base-values {:cp 0}
+                     :tags [:items
+                            :freebie-kit]
+                     :category "Gear"}
+           :balls {:title "Pokéballs"
+                   :description "Standard catch rate. Set of five."
+                   :base-values {:cp 0}
+                   :tags [:items
+                          :freebie-kit]
+                   :category "Gear"}
+           :potions {:title "Potions"
+                     :description "Band-aid in a bottle. Set of three."
+                     :base-values {:cp 0}
+                     :tags [:items
+                            :freebie-kit]
+                     :category "Gear"}
+           :hat {:title "Hat"
+                 :description "A red hat."
+                 :base-values {:cp 0}
+                 :tags [:items
+                        :freebie-kit]
+                 :category "Gear"}
+           :master-balls {:title "3x Master Balls"
                    :description "Catches any wild pokémon without fail, but can't be sold."
                    :base-values {:cp -100}
                    :tags [:items]
@@ -442,7 +473,10 @@
                     :base-values {:cp 300}
                     :tags [:drawbacks]
                     :category "Flaws"}}
- :layout [:document {:choice :pokemon-jump}
+ :layout [:document {:choice :pokemon-jump
+                     :title "Pokémon Trainer CYOA"
+                     :author "Quicksilver"}
+          "Hey there. Nice to meet you. My name isn't important, but I have a business proposal to offer you."
           "So I have this habit of watching people go on adventures. Unfortunately, with the way the Earth is completely mapped out and the lack of space program funding, the last great adventure I saw was James Cameron's submarine jaunt. Thus I am beset by an utter lack of good material."
           "The reason I have approached you is simple: you wish your life could be different. Perfectly normal, by the way. Escape fantasies are a natural part of life these days. However, what I am offering you is an actual chance at escape. Or, at the very least, a break."
           "Like I said, I am running out of good material. I want to see a story of adventure and excitement. This is impossible in this world. So! What I'm going to do is take your life and send it to a different world! Specifically: Pokémon! Yes, the video game. And the show and the books and the toys and the card game and you know what I mean."
@@ -450,4 +484,5 @@
           "Here's how it works: if you accept you stay in the world of Pokémon for ten years. During that time, time is stopped in your home universe, magic treehouse style. After the ten years are up I offer you a few choices, including going home."
           "Now, the world of Pokémon is actually rather dangerous, what with the feral creatures of unimaginable power and the roving gangs of criminals that are often pursuing some horrible cause and must be stopped. Therefore, I'm going to give you a budget. Use this budget to buy some supplies and skills before your adventure begins."
           "This budget won't help you at all once you start your new life, so spend it all now!"
-          ]}
+          "You get 1000 choice points. Spend them wisely"
+           ]}
