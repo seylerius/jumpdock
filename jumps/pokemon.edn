@@ -489,4 +489,11 @@
            "Here, you can take these things for free. You can also keep the clothes you're wearing right now. Your wallet and cell phone are fair game, but remember: no compatible cell service and a different currency."
            [:group {:filter [[:tag :freebie-kit]]
                     :sort [:title]}]]
+          [:div
+           [:h1 "Region"]
+           "Your region is the place in which your journey begins. It changes your starter cost and what pokémon you encounter."
+           "The pokémon world you're getting sent to is different from the game. It's similar to the TV show in many respects. Cities and towns are actually cities and downs, with more people and buildings than the games represent. Additionally, routes between towns are longer and more remote. Cars and such are prevalent, civilization is bustling, et cetera. Things are peaceful. Evil gangs are present, but the cops will stop them if you don't want to."
+           [:choice :location-roll]
+           [:group {:filter [[:tag :wheel-of-location]]
+                    :sort [:rollable]}]]
           ]}
