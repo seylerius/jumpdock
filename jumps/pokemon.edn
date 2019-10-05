@@ -239,7 +239,8 @@
            :champ {:title "Champ in the Making"
                    :description "You might just have what it takes to catch 'em all! You're an expert at training both teams and individuals, managing team dynamics, and working out social issues between teammates both pokémon and human. You can make teamwork work."
                    :base-values {:cp -600}
-                   :tags [:perks]
+                   :tags [:perks
+                          :capstone]
                    :category "Skills & Abilities"}
            :bag {:title "Bag"
                  :description "Bigger on the inside."
@@ -510,5 +511,27 @@
            [:group {:filter [[:tag :starter]]
                     :sort [:cp]}]
            [:group {:filter [[:tag :starter-options]]
-                    :sort [:cp :!title]}]]
-          ]}
+                    :sort [:cp
+                           :!title]}]]
+          [:div
+           [:h1 "Skills & Abilities"]
+           "Character customization on steriods. You want superpowers? You got superpowers. Have fun!"
+           [:group {:filter [[:tag :perks]
+                             [:tag :!capstone]]
+                    :sort [:cp]}]
+           [:choice :champ]]
+          [:div
+           [:h1 "Gear"]
+           "Welcome to my humble little shop of amazing gear that you aren't getting anywhere else. Find anything interesting?"
+           "The same item can be purchased multiple times."
+           [:group {:filter [[:tag :items]
+                             [:tag :!freebie-kit]]
+                    :sort [:cp
+                           :title]}]]
+          [:div
+           [:h1 "Flaws & Future"]
+           "You can take a few flaws to get more choice points in return. Only two, though. Don't want to be too minmaxed, do we?"
+           "Flaws override skills and identities."
+           [:group {:filter [[:tag :drawbacks]]
+                    :sort [:cp :title]}]
+           "Like I said, you're gonna be spending 10 years in the world of pokémon. After that, well, I leave the choice to you."]]}
