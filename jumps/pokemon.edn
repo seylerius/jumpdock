@@ -496,4 +496,12 @@
            [:choice :location-roll]
            [:group {:filter [[:tag :wheel-of-location]]
                     :sort [:rollable]}]]
+          [:div
+           [:h1 "Identity"]
+           "When I say you get a new life, I mean it. You can pick the life you lived in the pokémon world up to this point, but first..."
+           [:group {:filter [[:tag :age-wheel]]
+                    :sort [:!title]}]
+           "So you also get to choose the history of your new life in the world of pokémon. Each one has its perks... and its price. Your identity is more than just a resume; it affects your actions too. Each identity besides Drop-in gives you an extra 10-17 years of experience in the world of pokémon. Though you are still you, with your old set of memories and your own moral justifications, the new memories will affect your thought process, your reactions, and your instincts. You can overcome the drawbacks each one brings, but it will take time, effort, and willpower to break them."
+           [:group {:filter [[:tag :background]]
+                    :sort [:cp]}]]
           ]}
