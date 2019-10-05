@@ -504,4 +504,11 @@
            "So you also get to choose the history of your new life in the world of pokémon. Each one has its perks... and its price. Your identity is more than just a resume; it affects your actions too. Each identity besides Drop-in gives you an extra 10-17 years of experience in the world of pokémon. Though you are still you, with your old set of memories and your own moral justifications, the new memories will affect your thought process, your reactions, and your instincts. You can overcome the drawbacks each one brings, but it will take time, effort, and willpower to break them."
            [:group {:filter [[:tag :background]]
                     :sort [:cp]}]]
+          [:div
+           [:h1 "Starter"]
+           "Your starter begins at level 5 as the first stage of their evolutionary line. IVs are 31 for three random stats, random for the other three."
+           [:group {:filter [[:tag :starter]]
+                    :sort [:cp]}]
+           [:group {:filter [[:tag :starter-options]]
+                    :sort [:cp :!title]}]]
           ]}
