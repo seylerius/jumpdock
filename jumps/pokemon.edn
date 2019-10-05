@@ -91,6 +91,25 @@
                  :base-values {:cp 0}
                  :tags [:identity]
                  :interactions [:write-in :general/age]}
+           :keep-gender {:title "Keep Your Gender"
+                         :description "Staying the same gender is free."
+                         :base-values {:cp 0}
+                         :tags [:gender-picker
+                                :identity]
+                         :interactions [[:set {:target :gender}]]
+                         :category "Identity"}
+           :pick-gender {:title "Pick Your Gender"
+                         :description "Choosing a different one costs choice points."
+                         :base-values {:cp -100}
+                         :tags [:gender-picker
+                                :identity]
+                         :interactions [[:set {:target :gender}]]
+                         :category "Identity"}
+           :gender {:title "Gender"
+                    :description "Your Gender"
+                    :base-values {:cp 0}
+                    :tags [:identity]
+                    :interactions [:write-in]}
            :drop-in {:title "Drop-In"
                      :description "+ No memory set altering your actions. No history in the world of Pokémon\n- No history means some things can be difficult. You aren't getting and new skills for free\nYou wake up on the road just outside the first town in your region. You have no family, no friends, no history. All you have are the clothes you wear, the gear you purchased, and whatever skills or abilities you may have. Looking in your bag, you see a trainer card that will serve as identification in the event that you would need it. You notice a bunch of bird pokémon harassing something down the road. After shooing them off, you see that their target was a wild pokémon. As thanks for rescuing it, the pokémon seems to want to tag along with you."
                      :base-values {:cp 0}
@@ -502,6 +521,8 @@
            "When I say you get a new life, I mean it. You can pick the life you lived in the pokémon world up to this point, but first..."
            [:group {:filter [[:tag :age-wheel]]
                     :sort [:!title]}]
+           [:group {:filter [[:tag :gender-picker]]
+                    :sort [:cp]}]
            "So you also get to choose the history of your new life in the world of pokémon. Each one has its perks... and its price. Your identity is more than just a resume; it affects your actions too. Each identity besides Drop-in gives you an extra 10-17 years of experience in the world of pokémon. Though you are still you, with your old set of memories and your own moral justifications, the new memories will affect your thought process, your reactions, and your instincts. You can overcome the drawbacks each one brings, but it will take time, effort, and willpower to break them."
            [:group {:filter [[:tag :background]]
                     :sort [:cp]}]]
