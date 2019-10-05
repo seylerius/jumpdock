@@ -83,3 +83,4 @@ with the following special tags defined:
     + ~:title~ :: Alphabetical sort by item title
     + ~:rollable~ :: Numeric sort by roll target
 + ~:choice~ :: a specific choice item
++ ~:document~ :: The choice defining the doc requirements and budget
