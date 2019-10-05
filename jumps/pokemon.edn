@@ -485,4 +485,8 @@
           "Now, the world of Pokémon is actually rather dangerous, what with the feral creatures of unimaginable power and the roving gangs of criminals that are often pursuing some horrible cause and must be stopped. Therefore, I'm going to give you a budget. Use this budget to buy some supplies and skills before your adventure begins."
           "This budget won't help you at all once you start your new life, so spend it all now!"
           "You get 1000 choice points. Spend them wisely"
-           ]}
+          [:div
+           "Here, you can take these things for free. You can also keep the clothes you're wearing right now. Your wallet and cell phone are fair game, but remember: no compatible cell service and a different currency."
+           [:group {:filter [[:tag :freebie-kit]]
+                    :sort [:title]}]]
+          ]}
